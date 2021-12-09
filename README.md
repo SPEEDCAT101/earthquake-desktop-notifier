@@ -8,4 +8,4 @@ This project uses information from the US Geological Survey to get near live inf
 
 How To Run
 
-Download the Directory1.txt, delaytime.txt, Earthquake Notifier.py, and Untitled.ico.  Make sure they're in the same folder, and you can run the .py.  I reccomend you use Python 3 to run this, it may also work under Python 2 but I doubt it.
+Download the Directory1.txt, delaytime.txt, Earthquake Notifier.py, and Untitled.ico.  Make sure they're in the same folder, and you can open the .py in IDLE and run it.  Feel free to use a different .ico, this one I made as a stop gap.  The .ico is only seen on the notifications.  I reccomend you use Python 3 to run this, it may also work under Python 2 but I doubt it.
