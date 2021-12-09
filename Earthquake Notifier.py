@@ -2,7 +2,6 @@ import re
 import os
 import json
 import time
-import subprocess
 from tkinter import*
 import urllib.request
 from time import sleep
@@ -73,9 +72,7 @@ def getquakes():
     for quake in listOfQuakes:
         components = quake.split("-")
         epochTime = components[0]
-        #quakeDate = time.strftime('%Y-%m-%d %H:%M:%S+00:00', time.localtime(float(epochTime)/1000))
         quakeDate = time.strftime('%Y-%m-%dT%H:%M:%S+00:00', time.localtime(float(epochTime)/1000))
-        #'%Y-%m-%dT%H:%M:%SZ'
         title = components[2]
         magnitude = components[1]
         magnitude = re.sub('[M]', 'Magnitude:', magnitude)
@@ -97,7 +94,7 @@ def getquakes():
             print(e)
     print("comparing for new earthquakes")
     with open(d1, 'rb') as f:
-        try:  # catch OSError in case of a one line file 
+        try:
             f.seek(-2, os.SEEK_END)
             while f.read(1) != b'\n':
                 f.seek(-2, os.SEEK_CUR)
@@ -106,7 +103,7 @@ def getquakes():
         numero1 = f.readline().decode()
 
     with open(d2, 'rb') as f:
-        try:  # catch OSError in case of a one line file 
+        try:
             f.seek(-2, os.SEEK_END)
             while f.read(1) != b'\n':
                 f.seek(-2, os.SEEK_CUR)
@@ -233,10 +230,6 @@ while True:
         nocare += 1
         if nocare >= 3:
             nocare = 0
-    #if giventheok == 1:
-    #    getquakes()
-    #    sleep(delaytime)
-    #timepasso += 1
     sleep(0.1)
 
 
