@@ -7,4 +7,5 @@ NOTICE2: You must be running Windows 10 or Windows 11 for this to work, as those
 This project uses information from the US Geological Survey to get near live information on earthquakes.  It covers all US states (you must edit the .py to include the other 45 states).   Several libraries may need to be installed, such as win10toast (used to issue notifications to your desktop)
 
 How To Run
+
 Download the Directory1.txt, delaytime.txt, Earthquake Notifier.py, and Untitled.ico.  Make sure they're in the same folder, and you can run the .py.  I reccomend you use Python 3 to run this, it may also work under Python 2 but I doubt it.
